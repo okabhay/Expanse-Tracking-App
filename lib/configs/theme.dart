@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mumet/ui/colors/colors.dart';
 
@@ -12,14 +13,19 @@ class MyTheme {
       backgroundColor: XColors.WHITE,
       fontFamily: GoogleFonts.manrope().fontFamily,
 
+      scaffoldBackgroundColor: XColors.GREY_LIGHT_1,
+
       appBarTheme: const AppBarTheme(
-        backgroundColor: XColors.TRANSPARENT,
+        backgroundColor: XColors.WHITE,
         elevation: 0,
         centerTitle: true,
         titleTextStyle: TextStyle(
-          color: XColors.TEXT,
           fontSize: 16.0,
+          color: XColors.TEXT,
           fontWeight: FontWeight.bold,
+        ),
+        iconTheme: IconThemeData(
+          color: XColors.TEXT_LIGHT,
         ),
       ),
 
@@ -92,11 +98,11 @@ class MyTheme {
       primaryColorDark: XColors.PRIMARY_DARK,
       primaryColorLight: XColors.PRIMARY_LIGHT,
       backgroundColor: XColors.DARK,
-      scaffoldBackgroundColor: XColors.DARK,
+      scaffoldBackgroundColor: XColors.DARK_LIGHT_1,
       fontFamily: GoogleFonts.manrope().fontFamily,
 
       appBarTheme: const AppBarTheme(
-        backgroundColor: XColors.TRANSPARENT,
+        backgroundColor: XColors.DARK,
         elevation: 0,
         centerTitle: true,
         titleTextStyle: TextStyle(

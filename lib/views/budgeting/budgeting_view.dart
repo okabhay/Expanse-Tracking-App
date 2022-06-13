@@ -16,6 +16,7 @@ class BudgetingView extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Budgeting'),
       ),
+      backgroundColor: theme.backgroundColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

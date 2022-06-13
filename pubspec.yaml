@@ -25,6 +25,7 @@ dependencies:
   introduction_screen: ^3.0.0
   syncfusion_flutter_gauges: ^19.4.56
   syncfusion_flutter_charts: ^19.4.56
+  grouped_list: ^5.1.1
 
 dev_dependencies:
   flutter_test:

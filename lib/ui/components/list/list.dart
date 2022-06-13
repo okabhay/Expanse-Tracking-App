@@ -37,33 +37,23 @@ class ListWidget extends StatelessWidget {
     final theme = Theme.of(context);
     final isDarkMode = theme.brightness == Brightness.dark;
 
-    return Container(
-      padding: padding,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8.0),
-        color: isDarkMode? XColors.DARK : XColors.WHITE,
-      ),
-      child: GestureDetector(
-        onTap: onTap,
-        child: ListTile(
-          contentPadding: const EdgeInsets.all(0),
-          leading: ClipRRect(
-            borderRadius: BorderRadius.circular(8), // Image border
-            child: Container(
-              width: 40,
-              height: 40,
-              color: isDarkMode? XColors.DARK_LIGHT_1 : XColors.GREY_LIGHT_1, // Image radius
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network('https://cdn-icons-png.flaticon.com/512/198/198416.png', fit: BoxFit.cover),
-              ),
-            ),
+    return ListTile(
+      leading: ClipRRect(
+        borderRadius: BorderRadius.circular(8), // Image border
+        child: Container(
+          width: 40,
+          height: 40,
+          color: isDarkMode? XColors.DARK_LIGHT_1 : XColors.GREY_LIGHT_1, // Image radius
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.network('https://cdn-icons-png.flaticon.com/512/198/198416.png', fit: BoxFit.cover),
           ),
-          title: Text(title, style: theme.textTheme.titleSmall),
-          subtitle: _buildSubtitle(theme),
-          trailing: _buildTrailing(theme),
         ),
       ),
+      title: Text(title, style: theme.textTheme.titleSmall),
+      subtitle: _buildSubtitle(theme),
+      trailing: _buildTrailing(theme),
+      onTap: onTap,
     );
   }
 }
