@@ -57,7 +57,12 @@ class EntrypointView extends StatelessWidget {
             },
             child: getViewForIndex(model.currentIndex),
           ),
-          floatingActionButton: FloatingAction(key: key), // This trailing comma makes auto-formatting nicer for build methods.
+          floatingActionButton: FloatingAction(
+            key: key,
+            onOutcome: model.navigateToOutcome,
+            onIncome: model.navigateToIncome,
+            onSaving: model.navigateToSaving,
+          ), // This trailing comma makes auto-formatting nicer for build methods.
         ),
         viewModelBuilder: () => EntrypointViewModel(),
     );

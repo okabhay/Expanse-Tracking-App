@@ -101,6 +101,7 @@ class _MyOutlineButtonState extends State<MyOutlineButton> {
               widget.text,
               style: theme.textTheme.button!.copyWith(
                 color: textColor(theme.brightness == Brightness.dark),
+                fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(width: 8),

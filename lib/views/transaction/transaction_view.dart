@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grouped_list/grouped_list.dart';
 import 'package:mumet/ui/colors/colors.dart';
 import 'package:mumet/ui/components/list/list.dart';
+import 'package:mumet/ui/core/chart/bar_chart.dart';
 import 'package:mumet/ui/size/spacing.dart';
 import 'package:stacked/stacked.dart';
 
@@ -26,10 +27,9 @@ class TransactionView extends StatelessWidget {
               color: theme.backgroundColor,
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Image.asset('assets/images/chart.png', fit: BoxFit.contain, height: 234),
-                  ),
+                  XSpacing.verticalMedium,
+                  BarChart(),
+                  XSpacing.verticalMedium,
                   // create search text field with Search transaction label
                   Container(
                     height: 52,

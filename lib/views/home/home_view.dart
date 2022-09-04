@@ -5,6 +5,7 @@ import 'package:mumet/ui/components/widgets.dart';
 import 'package:mumet/ui/core/button/outline_button.dart';
 import 'package:mumet/ui/core/button/primary_button.dart';
 import 'package:mumet/ui/core/button/socandary_button.dart';
+import 'package:mumet/ui/core/chart/bar_chart.dart';
 import 'package:mumet/ui/size/spacing.dart';
 import 'package:stacked/stacked.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
@@ -71,6 +72,10 @@ class HomeView extends StatelessWidget {
               ),
               
               XSpacing.verticalMedium,
+              const Padding(
+                padding: EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
+                child: BarChart(),
+              ),
             ],
           ),
         ),

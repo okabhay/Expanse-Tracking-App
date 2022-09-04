@@ -5,7 +5,10 @@ import '../../colors/colors.dart';
 import '../../size/spacing.dart';
 
 class FloatingAction extends StatelessWidget {
-  const FloatingAction({Key? key}) : super(key: key);
+  final VoidCallback onOutcome;
+  final VoidCallback onIncome;
+  final VoidCallback onSaving;
+  const FloatingAction({Key? key, required this.onOutcome, required this.onIncome, required this.onSaving}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +38,7 @@ class FloatingAction extends StatelessWidget {
                           child: TransactionItem(
                             text: 'Outcome',
                             icon: const Icon(Icons.arrow_upward_rounded, color: XColors.WHITE, size: 24), 
-                            onTap: () {  }, 
+                            onTap: onOutcome, 
                           )
                         ),
                         // draw a line
@@ -44,7 +47,7 @@ class FloatingAction extends StatelessWidget {
                           child: TransactionItem(
                             text: 'Income',
                             icon: const Icon(Icons.arrow_downward_rounded, color: XColors.WHITE, size: 24), 
-                            onTap: () {  }, 
+                            onTap: onIncome, 
                           )
                         ),
                       ],
@@ -53,7 +56,7 @@ class FloatingAction extends StatelessWidget {
                     TransactionItem(
                       text: 'Saving Money',
                       icon: const Icon(Icons.clean_hands, color: XColors.WHITE, size: 24), 
-                      onTap: () {  }, 
+                      onTap: onSaving, 
                     ),
                     XSpacing.verticalMedium,
                     Center(
