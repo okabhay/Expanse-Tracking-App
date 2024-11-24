@@ -1,4 +1,4 @@
-# mumet finance tracking app
+# mumet finance management app
 ![Screenshot](https://images.ui8.net/uploads/image-1_1638886625297.png)
 
 A Expense Tracking Flutter project.
